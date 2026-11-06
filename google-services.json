@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "88538608206",
+    "project_id": "nilkamal-orders-6860b",
+    "storage_bucket": "nilkamal-orders-6860b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88538608206:android:33555f08587ccb8c2ac91f",
+        "android_client_info": {
+          "package_name": "com.nilkamal.orders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEVDUaem9CMwovFjQH1ef_8-7SB2S78pM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
