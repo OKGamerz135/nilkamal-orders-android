@@ -22,16 +22,6 @@ jobs:
           gradle-version: 8.10.2
       - name: Signing key
         run: echo "${{ secrets.KEYSTORE_B64 }}" | base64 -d > "$RUNNER_TEMP/release.p12"
-      - name: Get SHA-256 fingerprint
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        run: |
-          keytool -list -v \
-            -storetype PKCS12 \
-            -keystore "$RUNNER_TEMP/release.p12" \
-            -storepass "$KEYSTORE_PASSWORD" \
-            -alias "$KEY_ALIAS" | grep SHA256
       - name: Build
         env:
           KEYSTORE_FILE: ${{ runner.temp }}/release.p12
