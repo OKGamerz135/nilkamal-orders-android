@@ -22,7 +22,7 @@ jobs:
           gradle-version: 8.10.2
       - name: Signing key
         run: echo "${{ secrets.KEYSTORE_B64 }}" | base64 -d > "$RUNNER_TEMP/release.p12"
-              - name: Get SHA-256 fingerprint
+      - name: Get SHA-256 fingerprint
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
